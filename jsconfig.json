@@ -53,6 +53,9 @@
       "meteor/blaze-hot": [
         "/Users/feliperodrigues/.meteor/packages/blaze-hot/1.1.2/web.browser/hot.js",
         "/Users/feliperodrigues/.meteor/packages/blaze-hot/1.1.2/web.browser/update-templates.js"
+      ],
+      "meteor/dev-error-overlay": [
+        "/Users/feliperodrigues/.meteor/packages/dev-error-overlay/0.1.2/web.browser/client.js"
       ]
     }
   },
