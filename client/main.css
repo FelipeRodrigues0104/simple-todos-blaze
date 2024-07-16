@@ -93,6 +93,15 @@ header {
   margin-right: 16px;
 }
 
+.filter {
+  display: flex;
+  justify-content: center;
+}
+
+.filter > button {
+  background-color: #62807e;
+}
+
 .task-form > input:focus {
   outline: 0;
 }
