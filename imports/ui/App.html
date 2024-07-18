@@ -14,23 +14,34 @@
             </header>
     
             <div class="main">
-                {{> form }}
+                {{#if isUserLogged}}
+                    <div class="user">
+                        {{getUser.username}} 🚪
+                    </div>
+                    {{> form }}
     
-                <div class="filter">
-                    <button id="hide-completed-button">
-                        {{#if hideCompleted}}
-                                Show All
-                        {{else}}
-                                Hide Completed
-                        {{/if}}
-                    </button>
-                </div>
+                    <div class="filter">
+                        <button id="hide-completed-button">
+                            {{#if hideCompleted}}
+                                    Show All
+                            {{else}}
+                                    Hide Completed
+                            {{/if}}
+                        </button>
+                    </div>
     
-                <ul class="tasks">
-                    {{#each tasks}}
-                        {{> task}}
-                    {{/each}}
-                </ul>
+                    {{#if isLoading}}
+                        <div class="loading">loading...</div>
+                    {{/if}}
+    
+                    <ul class="tasks">
+                        {{#each tasks}}
+                            {{> task}}
+                        {{/each}}
+                    </ul>
+                {{else}}
+                    {{> login }}
+                {{/if}}
             </div>
         </div>
     </template>
