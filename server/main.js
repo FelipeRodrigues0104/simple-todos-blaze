@@ -15,7 +15,7 @@ const SEED_USERNAME = 'meteorite';
 const SEED_PASSWORD = 'password';
 
 Meteor.startup(() => {
-  console.log(Accounts);
+  //console.log(Accounts);
   if (!Accounts.findUserByUsername(SEED_USERNAME)) {
     Accounts.createUser({
       username: SEED_USERNAME,
