@@ -15,14 +15,13 @@ const SEED_USERNAME = 'meteorite';
 const SEED_PASSWORD = 'password';
 
 Meteor.startup(() => {
+  const user = Meteor.users.findOne({ username: 'your-username' });
   if (!Accounts.findUserByUsername(SEED_USERNAME)) {
     Accounts.createUser({
       username: SEED_USERNAME,
       password: SEED_PASSWORD,
     });
   }
-
-  const user = Accounts.findUserByUsername(SEED_USERNAME);
 
   if (TasksCollection.find().count() === 0) {
     [
